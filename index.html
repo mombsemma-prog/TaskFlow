@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Organises tes tâches simplement</p>
+    </header>
+    <section id="task-acceuil">
+            <h2 id="task-acceuil-titre">Organises. Planifies. Avances.</h2>
+            <h3 id="task-acceuil-soustitre">Gères facilement tes tâches et tes Priorités.</h3>
+            <button id="commencer-btn">Commencer</button>
+        </section>
+    <main id="application">
+        <section>
+            <h2>Nouvelle tâche</h2>
+            <form id="task-form">
+                <label for="task-title">Titre de la tâche</label>
+                <input type="text" id="task-title">
+                <p id="title-error"></p>
+                <label for="task-objectif">Objectif</label>
+                <input type="text" id="task-objectif">
+                <p id="objectif-error"></p>
+                <label for="task-category">Catégorie</label>
+                <input type="hidden" id="task-category-value" value="cours">
+                <div id="task-category">
+                    <button type="button" class="category-option" data-category="cours">
+                    📚 Cours
+                    </button>
+                    <button type="button" class="category-option" data-category="Devoir">
+                    📝 Devoir
+                    </button>
+                    <button type="button" class="category-option" data-category="Projet scolaire">
+                    💻 Projet scolaire
+                    </button>
+                    <button type="button" class="category-option" data-category="Projet personnel">
+                    🏠 Projet personnel
+                    </button>
+                </div>
+                <label for="task-priority">Priorité</label>
+                <input type="hidden" id="task-priority-value" value="moyenne">
+                <div id="task-priority">
+                    <button type="button" class="priority-option" data-priority="basse">
+                    Basse
+                    </button>
+                    <button type="button" class="priority-option" data-priority="moyenne">
+                    Moyenne
+                    </button>
+                    <button type="button" class="priority-option" data-priority="haute">
+                    Haute
+                    </button>
+                </div>
+                <label for="task-date">Date d'échéance</label>
+                <div id="date-container">
+                    <span>📅</span>
+                    <input type="date" id="task-date">
+                </div>
+                <p id="date-error"></p>
+                <button type="submit">Ajouter la tâche</button>
+            </form>
+        </section>
+        <section>
+            <h2>Mes tâches</h2>
+            <div id="task-filters">
+                <button id="all-filter">Toutes</button>
+                <button id="todo-filter">A faire</button>
+                <button id="done-filter">Faites</button> 
+                <button id="trash-button">🗑️ corbeille</button>
+            </div>
+            <div id="task-list"></div>
+        </section>
+    </main>
+</body>
+</html>
+<script src="script.js"></script>
