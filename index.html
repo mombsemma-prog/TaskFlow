@@ -6,8 +6,8 @@
     <title>TaskFlow</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-
 </head>
+<script src="script.js"></script>
 <body>
     <header>
         <h1>TaskFlow</h1>
@@ -28,7 +28,7 @@
                 <label for="task-objectif">Objectif</label>
                 <input type="text" id="task-objectif">
                 <p id="objectif-error"></p>
-                <label for="task-category">Catégorie</label>
+                <label>Catégorie</label>
                 <input type="hidden" id="task-category-value" value="cours">
                 <div id="task-category">
                     <button type="button" class="category-option" data-category="cours">
@@ -44,7 +44,7 @@
                     🏠 Projet personnel
                     </button>
                 </div>
-                <label for="task-priority">Priorité</label>
+                <label>Priorité</label>
                 <input type="hidden" id="task-priority-value" value="moyenne">
                 <div id="task-priority">
                     <button type="button" class="priority-option" data-priority="basse">
@@ -79,4 +79,3 @@
     </main>
 </body>
 </html>
-<script src="script.js"></script>
