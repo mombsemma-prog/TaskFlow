@@ -1,0 +1,9 @@
+{
+    "name": "TaskFlow",
+    "short_name": "TaskFlow",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#EAF2F7",
+    "theme_color": "#2A72A3",
+    "description": "Organise tes tâches simplement."
+}

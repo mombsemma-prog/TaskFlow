@@ -291,3 +291,12 @@ formulaire.addEventListener("submit", function(event) {
     console.log(JSON.stringify(taches));
     sauvegarderTaches();
 });
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+        .then(function() {
+            console.log("Service Worker enregistré !");
+        })
+        .catch(function(erreur) {
+            console.log("Erreur Service Worker :", erreur);
+        });
+}
